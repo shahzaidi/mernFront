@@ -5,7 +5,7 @@ import { GET_PRODUCTS_FAIL } from "../constant";
 import { GET_PRODUCT_FAIL } from "../constant";
 import { PRODUCT_DELETE_SUCCESS } from "../constant";
 
-const GET_USERS_URL = "http://localhost:4000";
+const GET_USERS_URL = "https://mernb-o5nz.onrender.com/";
 
 export const getProducts = () => async (dispatch) => {
   dispatch({ type: GET_PRODUCTS_REQUEST });
@@ -25,7 +25,7 @@ export const deletetProduct = (id) => async (dispatch) => {
   if (yes === true) {
     try {
       const { data } = await Axios.delete(
-        `http://localhost:4000/productdelete/${id}`
+        `https://mernb-o5nz.onrender.com/productdelete/${id}`
       );
 
       dispatch({ type: PRODUCT_DELETE_SUCCESS, payload: data });

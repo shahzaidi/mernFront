@@ -15,7 +15,7 @@ const Product = () => {
   const getProduct = async () => {
     try {
       setLoading(true);
-      let url = `https://mern-t0ot.onrender.com/productdetails/${name}`;
+      let url = `https://mernb-o5nz.onrender.com/productdetails/${name}`;
       let res = await axios.get(url);
       console.log(res?.data?.data, "resP");
       setProduct(res?.data?.data);
@@ -30,7 +30,7 @@ const Product = () => {
   const updateProductPrice = async () => {
     setRandom(Math.ceil(Math.random * 100));
     try {
-      let url = `https://mern-t0ot.onrender.com/productpriceupdate/${Product?._id}`;
+      let url = `https://mernb-o5nz.onrender.com/productpriceupdate/${Product?._id}`;
       let data2 = await axios.get(url);
       console.log(data2.data.product, "data2");
       setProduct(data2?.data.product);
